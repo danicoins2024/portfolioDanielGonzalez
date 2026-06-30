@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce la trayectoria profesional de Agustín Daniel González, Frontend Developer Junior. Educación técnica y habilidades.">
+  <title>Sobre Mí - Daniel González Portfolio</title>
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="crossorigin">
+  
+  <!-- Custom stylesheets -->
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/main.css">
+  
+  <!-- Web Components scripts -->
+  <script type="module" src="js/components/Navbar.js"></script>
+  <script type="module" src="js/components/Footer.js"></script>
+  
+  <!-- Main application script -->
+  <script type="module" src="js/app.js"></script>
+</head>
+<body data-page="about">
+
+  <!-- Reusable Navbar Component -->
+  <portfolio-navbar active="about"></portfolio-navbar>
+
+  <main class="container py-5">
+    <!-- Section Header -->
+    <div class="section-header">
+      <span class="section-label">Mi Trayectoria</span>
+      <h1 class="section-title text-gradient">Sobre Mí</h1>
+    </div>
+
+    <!-- Profile & Education Row -->
+    <div class="row g-5 mb-5">
+      <!-- Left Column: Portrait and Personal Specs -->
+      <div class="col-lg-4">
+        <div class="card p-3 mb-4 bg-secondary border border-color rounded-4 text-center">
+          <div class="mx-auto mb-3" style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; border: 2px solid var(--border-color);">
+            <img src="assets/images/profile-avatar.png" alt="Daniel González" class="w-100 h-100 object-fit-cover">
+          </div>
+          <h2 class="h5 mb-1" id="about-name">Agustín Daniel González</h2>
+          <span class="text-accent-gradient fw-medium mb-3 d-block">Frontend Developer Junior</span>
+          
+          <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
+            <span class="tech-chip text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-1"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>Buenos Aires, AR</span>
+            <span class="tech-chip text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-1"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Disponible</span>
+          </div>
+          
+          <div class="mt-4 text-start pt-3 border-top border-color">
+            <p class="small text-secondary mb-2"><strong>Email:</strong> <span data-profile="email"></span></p>
+            <p class="small text-secondary mb-3"><strong>Celular:</strong> <span data-profile="phone"></span></p>
+            <a href="#" class="btn btn-secondary btn-sm w-100 py-2" data-profile="cv" download>Descargar CV (PDF)</a>
+          </div>
+        </div>
+
+        <h3 class="h5 mb-3 text-gradient">Idiomas</h3>
+        <div class="row" id="languages-grid">
+          <!-- Languages dynamically injected by app.js -->
+        </div>
+      </div>
+
+      <!-- Right Column: Biography & Timeline -->
+      <div class="col-lg-8">
+        <section class="mb-5" aria-labelledby="about-profile-heading">
+          <h3 class="h4 mb-3 text-gradient" id="about-profile-heading">Perfil Profesional</h3>
+          <p class="text-secondary" style="font-size: 1.05rem;" id="about-bio">
+            Cargando biografía...
+          </p>
+        </section>
+
+        <section aria-labelledby="about-education-heading">
+          <h3 class="h4 mb-4 text-gradient" id="about-education-heading">Formación Académica</h3>
+          
+          <!-- Education Timeline Container -->
+          <div class="timeline-container" id="education-timeline">
+            <!-- Dynamically populated education items -->
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <hr class="my-5 border-color">
+
+    <!-- Grouped Skills Section -->
+    <section class="py-4" aria-labelledby="about-skills-heading">
+      <div class="section-header">
+        <span class="section-label">Competencias</span>
+        <h2 class="section-title text-gradient" id="about-skills-heading">Habilidades Técnicas</h2>
+      </div>
+      <div class="row" id="about-tech-grid">
+        <!-- Reusable tech cards -->
+      </div>
+    </section>
+
+    <hr class="my-5 border-color">
+
+    <!-- Soft Skills Section -->
+    <section class="py-4" aria-labelledby="about-soft-heading">
+      <div class="section-header">
+        <span class="section-label">Metodología</span>
+        <h2 class="section-title text-gradient" id="about-soft-heading">Habilidades Blandas</h2>
+      </div>
+      <div class="row" id="soft-skills-grid">
+        <!-- Soft skills injected by app.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Reusable Footer Component -->
+  <portfolio-footer></portfolio-footer>
+
+  <!-- Bootstrap Bundle JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6Rz83DNw5M+MNT8B5j7N6jIeHz" crossorigin="crossorigin"></script>
+</body>
+</html>
