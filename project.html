@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ficha técnica detallada, arquitectura, código fuente y demo en vivo del proyecto seleccionado.">
+  <title>Detalle del Proyecto - Portfolio Profesional</title>
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="crossorigin">
+  
+  <!-- Custom stylesheets -->
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/main.css">
+  
+  <!-- Web Components scripts -->
+  <script type="module" src="js/components/Navbar.js"></script>
+  <script type="module" src="js/components/Footer.js"></script>
+  
+  <!-- Main application script -->
+  <script type="module" src="js/app.js"></script>
+</head>
+<body data-page="project-detail">
+
+  <!-- Reusable Navbar Component -->
+  <portfolio-navbar active="projects"></portfolio-navbar>
+
+  <main class="container py-4">
+    <!-- Breadcrumb & Back Link -->
+    <a href="projects.html" class="detail-back-link" id="back-to-projects">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      Volver a proyectos
+    </a>
+
+    <!-- Detail Header -->
+    <section class="detail-header" aria-labelledby="project-detail-title">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <h1 class="detail-title text-gradient" id="project-detail-title">
+            Cargando proyecto...
+          </h1>
+          <p class="detail-summary text-secondary mb-0" id="project-detail-summary">
+            Cargando descripción...
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <div class="detail-actions justify-content-lg-end">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary px-4 py-2" id="project-demo-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-1"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              Demo en Vivo
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary px-4 py-2" id="project-code-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-1"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              Ver Código
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Project Screenshot -->
+    <div class="detail-hero-image">
+      <img src="" alt="Vista previa del proyecto" id="project-detail-image">
+    </div>
+
+    <!-- Technical Case Study Layout -->
+    <div class="row g-5">
+      <!-- Detailed Description Column -->
+      <div class="col-lg-8">
+        <!-- Problem Section -->
+        <section class="mb-5" aria-labelledby="heading-problem">
+          <h2 class="detail-section-title" id="heading-problem">El Problema que Resuelve</h2>
+          <p class="text-secondary" id="project-problem">Cargando...</p>
+        </section>
+
+        <!-- Goals Section -->
+        <section class="mb-5" aria-labelledby="heading-goals">
+          <h2 class="detail-section-title" id="heading-goals">Objetivos de Desarrollo</h2>
+          <ul class="text-secondary" id="project-goals">
+            <li>Cargando...</li>
+          </ul>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mb-5" aria-labelledby="heading-features">
+          <h2 class="detail-section-title" id="heading-features">Funcionalidades Clave</h2>
+          <ul class="list-unstyled text-secondary" id="project-features">
+            <!-- Dynamically populated checklist -->
+          </ul>
+        </section>
+
+        <!-- Architecture Section -->
+        <section class="mb-5" aria-labelledby="heading-architecture">
+          <h2 class="detail-section-title" id="heading-architecture">Arquitectura del Proyecto</h2>
+          <p class="text-secondary" id="project-architecture">Cargando...</p>
+        </section>
+
+        <!-- Learnings Section -->
+        <section class="mb-5" aria-labelledby="heading-learnings">
+          <h2 class="detail-section-title" id="heading-learnings">Aprendizajes Obtenidos</h2>
+          <ul class="text-secondary" id="project-learnings">
+            <li>Cargando...</li>
+          </ul>
+        </section>
+
+        <!-- Conclusions Section -->
+        <section class="mb-5" aria-labelledby="heading-conclusions">
+          <h2 class="detail-section-title" id="heading-conclusions">Conclusiones</h2>
+          <p class="text-secondary" id="project-conclusions">Cargando...</p>
+        </section>
+      </div>
+
+      <!-- Tech Specs Sidebar Column -->
+      <aside class="col-lg-4">
+        <div class="sticky-top" style="top: 5.5rem;">
+          <h2 class="h5 mb-3 text-gradient">Especificaciones Técnicas</h2>
+          
+          <div class="specs-card">
+            <div class="specs-row">
+              <span class="specs-label">Categoría</span>
+              <span class="specs-value">Desarrollo Web</span>
+            </div>
+            <div class="specs-row">
+              <span class="specs-label">Frameworks</span>
+              <span class="specs-value">Ninguno (Vanilla)</span>
+            </div>
+            <div class="specs-row">
+              <span class="specs-label">Estilo CSS</span>
+              <span class="specs-value">Customized Bootstrap</span>
+            </div>
+            <div class="specs-row">
+              <span class="specs-label">Despliegue</span>
+              <span class="specs-value">Netlify / GitHub Pages</span>
+            </div>
+          </div>
+          
+          <h2 class="h5 mb-3 text-gradient">Tecnologías Aplicadas</h2>
+          <div class="d-flex flex-wrap gap-2" id="project-tech-badges">
+            <!-- Dynamic tech chips -->
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Reusable Footer Component -->
+  <portfolio-footer></portfolio-footer>
+
+  <!-- Bootstrap Bundle JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6Rz83DNw5M+MNT8B5j7N6jIeHz" crossorigin="crossorigin"></script>
+</body>
+</html>
