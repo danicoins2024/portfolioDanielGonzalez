@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ponte en contacto con Agustín Daniel González. Formulario de contacto directo y enlaces a redes profesionales.">
+  <title>Contacto - Daniel González Portfolio</title>
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="crossorigin">
+  
+  <!-- Custom stylesheets -->
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/main.css">
+  
+  <!-- Web Components scripts -->
+  <script type="module" src="js/components/Navbar.js"></script>
+  <script type="module" src="js/components/Footer.js"></script>
+  <script type="module" src="js/components/ContactForm.js"></script>
+  
+  <!-- Main application script -->
+  <script type="module" src="js/app.js"></script>
+</head>
+<body data-page="contact">
+
+  <!-- Reusable Navbar Component -->
+  <portfolio-navbar active="contact"></portfolio-navbar>
+
+  <main class="container py-5">
+    <!-- Section Header -->
+    <div class="section-header">
+      <span class="section-label">Hablemos</span>
+      <h1 class="section-title text-gradient">Contacto</h1>
+      <p class="text-secondary mt-2">
+        ¿Tienes una propuesta laboral, buscas un colaborador o quieres consultarme sobre algún proyecto? Completa el formulario o contáctame por las redes.
+      </p>
+    </div>
+
+    <!-- Contact Grid -->
+    <div class="row g-5">
+      <!-- Left Column: Contact Methods list -->
+      <section class="col-lg-5" aria-labelledby="heading-methods">
+        <h2 class="h4 mb-4 text-gradient" id="heading-methods">Canales Directos</h2>
+        <div class="d-flex flex-column gap-3" id="contact-methods">
+          <!-- Dynamically populated contact list by app.js -->
+          <div class="text-center py-4 border border-color rounded bg-secondary">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Cargando canales...</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Column: Reusable Contact Form Component -->
+      <section class="col-lg-7" aria-labelledby="heading-form">
+        <h2 class="visually-hidden" id="heading-form">Formulario de Contacto</h2>
+        <!-- Web Component registers contact form logic -->
+        <contact-form></contact-form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Reusable Footer Component -->
+  <portfolio-footer></portfolio-footer>
+
+  <!-- Bootstrap Bundle JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6Rz83DNw5M+MNT8B5j7N6jIeHz" crossorigin="crossorigin"></script>
+</body>
+</html>
